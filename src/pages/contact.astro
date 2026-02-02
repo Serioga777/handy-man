@@ -1,0 +1,133 @@
+---
+import Base from "../layouts/Base.astro";
+
+const title = "Contact | Haven & Hand";
+const description = "Book a premium handyman consultation in minutes.";
+
+const formAction = import.meta.env.PUBLIC_FORMSPREE_ACTION ?? "https://formspree.io/f/your-id";
+const siteUrl = import.meta.env.PUBLIC_SITE_URL;
+const nextUrl = siteUrl ? siteUrl.replace(/\/$/, "") + "/thank-you" : "/thank-you";
+---
+<Base {title} {description}>
+  <section class="hero hero-slim" data-reveal>
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">Book</p>
+        <h1>Schedule a white-glove consultation.</h1>
+        <p class="lead">Share your project details and we'll confirm within 24 hours.</p>
+        <div class="trust-bar">
+          <span>Licensed & insured</span>
+          <span>Priority scheduling</span>
+          <span>Photo documentation</span>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="card-header">Availability</div>
+        <div class="card-body">
+          <div class="slot">Next opening: Wednesday</div>
+          <p class="muted">We coordinate a time that works for you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" data-reveal>
+    <div class="container">
+      <div class="form-card">
+        <div>
+          <h2>Request a visit</h2>
+          <p class="muted">Tell us what you need and when you'd like to schedule.</p>
+        </div>
+        <form class="booking-form" action={formAction} method="POST">
+          <input type="hidden" name="_subject" value="New booking request" />
+          <input type="hidden" name="_next" value={nextUrl} />
+          <label class="sr-only">
+            Don't fill this out if you're human
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
+          </label>
+          <div class="form-grid">
+            <label>
+              Service category
+              <select name="service_category" required>
+                <option value="Finish carpentry">Finish carpentry</option>
+                <option value="Fixture installation">Fixture installation</option>
+                <option value="Maintenance program">Maintenance program</option>
+                <option value="Turnover readiness">Turnover readiness</option>
+                <option value="Custom project">Custom project</option>
+              </select>
+            </label>
+            <label>
+              Property type
+              <select name="property_type" required>
+                <option value="Primary residence">Primary residence</option>
+                <option value="Rental property">Rental property</option>
+                <option value="Managed portfolio">Managed portfolio</option>
+              </select>
+            </label>
+            <label>
+              Preferred timing
+              <input type="text" name="preferred_timing" placeholder="Weekday mornings, flexible" required />
+            </label>
+            <label>
+              Estimated scope
+              <input type="text" name="estimated_scope" placeholder="2-4 hours" />
+            </label>
+          </div>
+          <label>
+            Project details
+            <textarea name="project_details" rows="4" placeholder="Tell us what you need and any finish requirements." required></textarea>
+          </label>
+          <div class="form-grid">
+            <label>
+              Full name
+              <input type="text" name="full_name" placeholder="Alex Morgan" required />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" placeholder="alex@email.com" required />
+            </label>
+            <label>
+              Phone
+              <input type="tel" name="phone" placeholder="(555) 555-5555" required />
+            </label>
+            <label>
+              Property address
+              <input type="text" name="property_address" placeholder="Street, City" required />
+            </label>
+          </div>
+          <button class="btn btn-primary" type="submit">Submit request</button>
+          <p class="muted form-note">We respond within 24 hours with confirmation and next steps.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="section split" data-reveal>
+    <div class="container split-inner">
+      <div>
+        <p class="eyebrow">Direct contact</p>
+        <h2>Need immediate support?</h2>
+        <p class="muted">Concierge line and priority email for managed properties.</p>
+        <div class="contact-list">
+          <span>Phone: (555) 642-8901</span>
+          <span>Email: concierge@havenhand.com</span>
+          <span>Service area: Metro + surrounding suburbs</span>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-metric">
+          <span class="metric">24h</span>
+          <span class="muted">Confirmation window</span>
+        </div>
+        <div class="panel-metric">
+          <span class="metric">10am-6pm</span>
+          <span class="muted">Concierge hours</span>
+        </div>
+        <div class="panel-metric">
+          <span class="metric">365</span>
+          <span class="muted">Days of support</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>

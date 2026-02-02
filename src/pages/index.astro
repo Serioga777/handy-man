@@ -1,0 +1,145 @@
+---
+import Base from "../layouts/Base.astro";
+
+const title = "Haven & Hand | Luxury Handyman Services";
+const description = "White-glove handyman services for high-value homes, landlords, and property managers.";
+---
+<Base {title} {description}>
+  <section class="hero hero-home">
+    <div class="container hero-inner">
+      <div class="hero-copy" data-reveal>
+        <p class="eyebrow">Luxury handyman services</p>
+        <h1>White-glove care for homes that demand precision.</h1>
+        <p class="lead">
+          Concierge-level repairs and upgrades with impeccable finishes, insured work, and on-time execution.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="/contact">Book a Consultation</a>
+          <a class="btn btn-ghost" href="/pricing">Get an Estimate</a>
+        </div>
+        <div class="trust-chips">
+          <span class="chip"><span class="chip-dot" aria-hidden="true"></span>Licensed & insured</span>
+          <span class="chip"><span class="chip-dot" aria-hidden="true"></span>4.9/5 average</span>
+          <span class="chip"><span class="chip-dot" aria-hidden="true"></span>Background-checked pros</span>
+        </div>
+      </div>
+      <div class="hero-stage" data-reveal>
+        <div class="stage-frame stage-frame--primary">
+          <img
+            src="/assets/img/hero-atelier.svg"
+            alt="Luxury interior and craftsmanship detail"
+            loading="eager"
+            decoding="async"
+          />
+        </div>
+        <div class="stage-frame stage-frame--secondary">
+          <img src="/assets/img/portfolio-2.svg" alt="Project preview" loading="lazy" decoding="async" />
+        </div>
+        <div class="stage-card">
+          <div class="stage-kicker">Next opening</div>
+          <div class="stage-slot">Wednesday | 10:30 AM</div>
+          <p class="stage-meta">Confirm within 24 hours | Fully insured</p>
+          <a class="btn btn-primary" href="/contact">Reserve a Visit</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section services-preview" data-reveal>
+    <div class="container">
+      <div class="section-head">
+        <h2>Precision upgrades and repairs, executed to premium standards.</h2>
+        <p class="muted">From fine carpentry to maintenance, every detail is handled with care.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Interior Finish Work</h3>
+          <p class="muted">Trim, molding, doors, and meticulous paint prep.</p>
+        </div>
+        <div class="card">
+          <h3>Fixtures & Installations</h3>
+          <p class="muted">Lighting, hardware, shelving, and custom mounts.</p>
+        </div>
+        <div class="card">
+          <h3>Preventive Maintenance</h3>
+          <p class="muted">Proactive care that protects property value.</p>
+        </div>
+        <div class="card">
+          <h3>Turnover Readiness</h3>
+          <p class="muted">Fast, clean, and documented for managers.</p>
+        </div>
+        <div class="card">
+          <h3>Exterior Touch-ups</h3>
+          <p class="muted">Gates, fences, and exterior details with curb appeal.</p>
+        </div>
+        <div class="card">
+          <h3>Custom Requests</h3>
+          <p class="muted">Bespoke solutions for premium properties.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section split" data-reveal>
+    <div class="container split-inner">
+      <div>
+        <p class="eyebrow">Why Haven & Hand</p>
+        <h2>Craftsmanship you can see. Reliability you can feel.</h2>
+        <ul class="list">
+          <li>Detail-obsessed finishes and protection</li>
+          <li>Respectful crews and spotless cleanup</li>
+          <li>Transparent scheduling and documentation</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <div class="panel-metric">
+          <span class="metric">98%</span>
+          <span class="muted">Repeat clients</span>
+        </div>
+        <div class="panel-metric">
+          <span class="metric">24h</span>
+          <span class="muted">Response time</span>
+        </div>
+        <div class="panel-metric">
+          <span class="metric">5.0</span>
+          <span class="muted">Quality score</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section process" data-reveal>
+    <div class="container">
+      <div class="section-head">
+        <h2>A premium experience in three steps.</h2>
+      </div>
+      <div class="grid-3">
+        <div class="step">
+          <span class="step-number">01</span>
+          <h3>Request</h3>
+          <p class="muted">Share your needs in minutes.</p>
+        </div>
+        <div class="step">
+          <span class="step-number">02</span>
+          <h3>Assess</h3>
+          <p class="muted">We define scope and provide a clear quote.</p>
+        </div>
+        <div class="step">
+          <span class="step-number">03</span>
+          <h3>Complete</h3>
+          <p class="muted">Flawless execution and follow-up.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cta-panel" data-reveal>
+    <div class="container cta-inner">
+      <div>
+        <h2>Schedule your walk-through</h2>
+        <p class="muted">Licensed, insured, and accountable - every job, every time.</p>
+      </div>
+      <a class="btn btn-primary" href="/contact">Book a Consultation</a>
+    </div>
+  </section>
+</Base>

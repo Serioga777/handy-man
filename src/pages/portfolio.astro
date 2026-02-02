@@ -1,0 +1,90 @@
+---
+import Base from "../layouts/Base.astro";
+
+const title = "Portfolio | Haven & Hand";
+const description = "Curated results from luxury handyman projects and property upgrades.";
+---
+<Base {title} {description}>
+  <section class="hero hero-slim" data-reveal>
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">Portfolio</p>
+        <h1>Precision upgrades with measurable impact.</h1>
+        <p class="lead">Every project is designed to protect property value and elevate everyday living.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="/contact">Request a Walk-Through</a>
+          <a class="btn btn-ghost" href="/services">View Services</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="card-header">Project highlights</div>
+        <div class="card-body">
+          <div class="slot">120+ premium projects</div>
+          <p class="muted">Repeat clients across luxury residences.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" data-reveal>
+    <div class="container">
+      <div class="section-head">
+        <h2>Featured work</h2>
+        <p class="muted">Curated outcomes across interior, exterior, and turnover readiness.</p>
+      </div>
+      <div class="portfolio-grid">
+        <div class="portfolio-tile">
+          <img src="/assets/img/portfolio-1.svg" alt="Custom shelving suite" loading="lazy" />
+          <div class="tile-body">
+            <h3>Custom shelving suite</h3>
+            <p class="muted">High-gloss finishes and hidden fasteners.</p>
+          </div>
+        </div>
+        <div class="portfolio-tile">
+          <img src="/assets/img/portfolio-2.svg" alt="Luxury lighting upgrade" loading="lazy" />
+          <div class="tile-body">
+            <h3>Luxury lighting upgrade</h3>
+            <p class="muted">Statement fixtures with clean wiring paths.</p>
+          </div>
+        </div>
+        <div class="portfolio-tile">
+          <img src="/assets/img/portfolio-3.svg" alt="Turnover refresh" loading="lazy" />
+          <div class="tile-body">
+            <h3>Turnover refresh</h3>
+            <p class="muted">Full repaint, hardware, and punch list closeout.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section split" data-reveal>
+    <div class="container split-inner">
+      <div>
+        <p class="eyebrow">Before & After</p>
+        <h2>Measured improvements, not just cosmetic.</h2>
+        <p class="muted">We document every step for owners and property managers.</p>
+      </div>
+      <div class="panel before-after">
+        <div>
+          <span class="pill">Before</span>
+          <p class="muted">Uneven finish, mismatched hardware, visible fasteners.</p>
+        </div>
+        <div>
+          <span class="pill">After</span>
+          <p class="muted">Seamless alignment, clean materials, gallery-ready finish.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cta-panel" data-reveal>
+    <div class="container cta-inner">
+      <div>
+        <h2>Let's design your next upgrade</h2>
+        <p class="muted">We bring a premium standard to every detail.</p>
+      </div>
+      <a class="btn btn-primary" href="/contact">Book a Consultation</a>
+    </div>
+  </section>
+</Base>

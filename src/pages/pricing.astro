@@ -1,0 +1,104 @@
+---
+import Base from "../layouts/Base.astro";
+
+const title = "Pricing | Haven & Hand";
+const description = "Transparent estimate options and premium service tiers.";
+---
+<Base {title} {description}>
+  <section class="hero hero-slim" data-reveal>
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">Pricing</p>
+        <h1>Transparent estimates built around scope and finish level.</h1>
+        <p class="lead">No surprises, no vague ranges. We scope carefully and quote with clarity.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="/contact">Start an Estimate</a>
+          <a class="btn btn-ghost" href="/how-it-works">How It Works</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="card-header">Minimum service call</div>
+        <div class="card-body">
+          <div class="slot">From $250</div>
+          <p class="muted">Applied to approved work.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" data-reveal>
+    <div class="container">
+      <div class="section-head">
+        <h2>Estimate process</h2>
+      </div>
+      <div class="grid-3">
+        <div class="step">
+          <span class="step-number">01</span>
+          <h3>Scope</h3>
+          <p class="muted">We capture your priorities, timeline, and finish expectations.</p>
+        </div>
+        <div class="step">
+          <span class="step-number">02</span>
+          <h3>Quote</h3>
+          <p class="muted">You receive an itemized estimate with materials and labor.</p>
+        </div>
+        <div class="step">
+          <span class="step-number">03</span>
+          <h3>Schedule</h3>
+          <p class="muted">We lock timing and provide pre-visit guidance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" data-reveal>
+    <div class="container">
+      <div class="section-head">
+        <h2>Service tiers</h2>
+        <p class="muted">Choose the finish level that matches your property standards.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card tier">
+          <h3>Lite</h3>
+          <p class="muted">Best for quick fixes and essentials.</p>
+          <div class="tier-price">$</div>
+          <ul class="list">
+            <li>Priority scheduling</li>
+            <li>Standard materials</li>
+            <li>Basic documentation</li>
+          </ul>
+        </div>
+        <div class="card tier featured">
+          <h3>Standard</h3>
+          <p class="muted">Our most popular premium package.</p>
+          <div class="tier-price">$$</div>
+          <ul class="list">
+            <li>Finish-grade materials</li>
+            <li>Photo reporting</li>
+            <li>Quality review</li>
+          </ul>
+        </div>
+        <div class="card tier">
+          <h3>Signature</h3>
+          <p class="muted">For concierge-level upgrades.</p>
+          <div class="tier-price">$$$</div>
+          <ul class="list">
+            <li>Dedicated project lead</li>
+            <li>Custom sourcing</li>
+            <li>Warranty follow-up</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cta-panel" data-reveal>
+    <div class="container cta-inner">
+      <div>
+        <h2>Request a tailored quote</h2>
+        <p class="muted">We'll confirm your request within 24 hours.</p>
+      </div>
+      <a class="btn btn-primary" href="/contact">Start an Estimate</a>
+    </div>
+  </section>
+</Base>

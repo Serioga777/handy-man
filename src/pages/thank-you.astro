@@ -1,0 +1,74 @@
+---
+import Base from "../layouts/Base.astro";
+
+const title = "Request Received | Haven & Hand";
+const description = "Thanks - your booking request has been received.";
+---
+<Base {title} {description}>
+  <section class="hero hero-slim" data-reveal>
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">Request received</p>
+        <h1>You're on our radar.</h1>
+        <p class="lead">
+          Thanks - we've received your request. We'll confirm scheduling within 24 hours with next steps and a clear
+          scope.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="/services">Explore Services</a>
+          <a class="btn btn-ghost" href="/">Back to Home</a>
+        </div>
+        <div class="trust-bar">
+          <span>Licensed & insured</span>
+          <span>Clean finish + documentation</span>
+          <span>Workmanship guarantee</span>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="card-header">Need immediate support?</div>
+        <div class="card-body">
+          <p class="muted">Concierge line: (555) 642-8901</p>
+          <p class="muted">Email: concierge@havenhand.com</p>
+          <p class="muted">Hours: 10am - 6pm</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" data-reveal>
+    <div class="container">
+      <div class="section-head">
+        <h2>What happens next</h2>
+        <p class="muted">A premium process that protects your time and your property.</p>
+      </div>
+      <div class="grid-3">
+        <div class="step">
+          <span class="step-number">01</span>
+          <h3>Review</h3>
+          <p class="muted">We review your request and confirm scope questions.</p>
+        </div>
+        <div class="step">
+          <span class="step-number">02</span>
+          <h3>Confirm</h3>
+          <p class="muted">We propose times and lock a visit that fits your schedule.</p>
+        </div>
+        <div class="step">
+          <span class="step-number">03</span>
+          <h3>Execute</h3>
+          <p class="muted">White-glove protection, clean finish, and documented completion.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cta-panel" data-reveal>
+    <div class="container cta-inner">
+      <div>
+        <h2>Want to add more details?</h2>
+        <p class="muted">Reply to our confirmation email, or submit another note.</p>
+      </div>
+      <a class="btn btn-primary" href="/contact">Add details</a>
+    </div>
+  </section>
+</Base>
+

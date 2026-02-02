@@ -1,0 +1,105 @@
+---
+import Base from "../layouts/Base.astro";
+
+const title = "Services | Haven & Hand";
+const description = "Luxury handyman services covering repairs, upgrades, and maintenance for premium properties.";
+---
+<Base {title} {description}>
+  <section class="hero hero-slim" data-reveal>
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">Services</p>
+        <h1>Precision work across every corner of your property.</h1>
+        <p class="lead">From fine finish carpentry to preventive maintenance, we execute with discretion and care.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="/contact">Book a Consultation</a>
+          <a class="btn btn-ghost" href="/pricing">Estimate Options</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="card-header">Service standards</div>
+        <div class="card-body">
+          <p class="muted">Licensed, insured, and backed by a workmanship guarantee on every visit.</p>
+          <div class="pill-row">
+            <span class="pill">Detail protection</span>
+            <span class="pill">Clean finish</span>
+            <span class="pill">Photo documentation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" data-reveal>
+    <div class="container">
+      <div class="section-head">
+        <h2>Core service categories</h2>
+        <p class="muted">High-touch execution for homeowners, landlords, and property managers.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Finish Carpentry</h3>
+          <p class="muted">Trim, molding, doors, and cabinetry alignment.</p>
+        </div>
+        <div class="card">
+          <h3>Fixture Installation</h3>
+          <p class="muted">Lighting, plumbing fixtures, mounts, and smart hardware.</p>
+        </div>
+        <div class="card">
+          <h3>Paint & Surface Prep</h3>
+          <p class="muted">Small-area refinishing with museum-grade protection.</p>
+        </div>
+        <div class="card">
+          <h3>Maintenance Programs</h3>
+          <p class="muted">Seasonal checklists and proactive property care.</p>
+        </div>
+        <div class="card">
+          <h3>Turnover Readiness</h3>
+          <p class="muted">Fast refreshes that protect your timeline and reputation.</p>
+        </div>
+        <div class="card">
+          <h3>Custom Projects</h3>
+          <p class="muted">Bespoke solutions with premium materials and finish control.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section split" data-reveal>
+    <div class="container split-inner">
+      <div>
+        <p class="eyebrow">Quality Standards</p>
+        <h2>Every job ends with a white-glove review.</h2>
+        <ul class="list">
+          <li>Protective coverings and dust control</li>
+          <li>Material sourcing vetted for durability</li>
+          <li>Photo documentation for every visit</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <div class="panel-metric">
+          <span class="metric">4.9/5</span>
+          <span class="muted">Client satisfaction</span>
+        </div>
+        <div class="panel-metric">
+          <span class="metric">72h</span>
+          <span class="muted">Typical turnaround</span>
+        </div>
+        <div class="panel-metric">
+          <span class="metric">100%</span>
+          <span class="muted">Insured work</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cta-panel" data-reveal>
+    <div class="container cta-inner">
+      <div>
+        <h2>Request a tailored estimate</h2>
+        <p class="muted">We scope carefully and schedule around your availability.</p>
+      </div>
+      <a class="btn btn-primary" href="/contact">Start the request</a>
+    </div>
+  </section>
+</Base>

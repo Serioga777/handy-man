@@ -1,0 +1,109 @@
+---
+import "../styles/base.css";
+import "../styles/components.css";
+import "../styles/pages.css";
+
+const {
+  title = "Haven & Hand | Luxury Handyman Services",
+  description = "White-glove handyman services for high-value homes, landlords, and property managers."
+} = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600&family=Sora:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/">
+          <img class="brand-mark" src="/assets/img/brand-mark.svg" width="36" height="36" alt="" aria-hidden="true" />
+          <span class="logo">Haven & Hand</span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <a href="/services">Services</a>
+          <a href="/how-it-works">How It Works</a>
+          <a href="/portfolio">Portfolio</a>
+          <a href="/pricing">Pricing</a>
+          <a href="/about">Standards</a>
+        </nav>
+        <div class="header-actions">
+          <a class="btn btn-primary header-cta" href="/contact">
+            <span class="cta-full">Book a Consultation</span>
+            <span class="cta-short">Book</span>
+          </a>
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="mobile-nav"
+            data-nav-toggle
+          >
+            <span class="nav-toggle-icon" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="mobile-nav" id="mobile-nav" data-mobile-nav aria-hidden="true">
+        <div class="mobile-nav-backdrop" data-nav-close></div>
+        <div class="mobile-nav-panel" role="dialog" aria-modal="true" aria-label="Site menu">
+          <div class="mobile-nav-top">
+            <a class="brand" href="/" data-nav-close>
+              <img class="brand-mark" src="/assets/img/brand-mark.svg" width="34" height="34" alt="" aria-hidden="true" />
+              <span class="logo">Haven & Hand</span>
+            </a>
+            <button class="nav-close" type="button" aria-label="Close menu" data-nav-close></button>
+          </div>
+          <nav class="mobile-nav-links" aria-label="Mobile">
+            <a href="/services">Services</a>
+            <a href="/how-it-works">How It Works</a>
+            <a href="/portfolio">Portfolio</a>
+            <a href="/pricing">Pricing</a>
+            <a href="/about">Standards</a>
+            <a href="/contact">Book</a>
+          </nav>
+          <div class="mobile-nav-bottom">
+            <a class="btn btn-primary" href="/contact" data-nav-close>Book a Consultation</a>
+            <p class="muted small">Licensed | Insured | Background-checked</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <div class="logo">Haven & Hand</div>
+          <p class="muted">Luxury-grade repairs and upgrades with concierge reliability.</p>
+        </div>
+        <div class="footer-links">
+          <a href="/services">Services</a>
+          <a href="/portfolio">Portfolio</a>
+          <a href="/pricing">Pricing</a>
+          <a href="/contact">Book</a>
+        </div>
+        <div class="footer-meta">
+          <span>Licensed | Insured | Background-checked</span>
+          <span>Response within 24 hours</span>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/assets/js/main.js"></script>
+  </body>
+</html>
