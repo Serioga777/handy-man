@@ -3,6 +3,8 @@ import Base from "../layouts/Base.astro";
 
 const title = "Services | Haven & Hand";
 const description = "Luxury handyman services covering repairs, upgrades, and maintenance for premium properties.";
+
+const base = import.meta.env.BASE_URL;
 ---
 <Base {title} {description}>
   <section class="hero hero-slim" data-reveal>
@@ -12,8 +14,8 @@ const description = "Luxury handyman services covering repairs, upgrades, and ma
         <h1>Precision work across every corner of your property.</h1>
         <p class="lead">From fine finish carpentry to preventive maintenance, we execute with discretion and care.</p>
         <div class="cta-row">
-          <a class="btn btn-primary" href="/contact">Book a Consultation</a>
-          <a class="btn btn-ghost" href="/pricing">Estimate Options</a>
+          <a class="btn btn-primary" href={`${base}contact/`}>Book a Consultation</a>
+          <a class="btn btn-ghost" href={`${base}pricing/`}>Estimate Options</a>
         </div>
       </div>
       <div class="hero-card">
@@ -99,7 +101,7 @@ const description = "Luxury handyman services covering repairs, upgrades, and ma
         <h2>Request a tailored estimate</h2>
         <p class="muted">We scope carefully and schedule around your availability.</p>
       </div>
-      <a class="btn btn-primary" href="/contact">Start the request</a>
+      <a class="btn btn-primary" href={`${base}contact/`}>Start the request</a>
     </div>
   </section>
 </Base>

@@ -4,9 +4,10 @@ import Base from "../layouts/Base.astro";
 const title = "Contact | Haven & Hand";
 const description = "Book a premium handyman consultation in minutes.";
 
+const base = import.meta.env.BASE_URL;
 const formAction = import.meta.env.PUBLIC_FORMSPREE_ACTION ?? "https://formspree.io/f/your-id";
 const siteUrl = import.meta.env.PUBLIC_SITE_URL;
-const nextUrl = siteUrl ? siteUrl.replace(/\/$/, "") + "/thank-you" : "/thank-you";
+const nextUrl = siteUrl ? siteUrl.replace(/\/$/, "") + "/thank-you" : base + "thank-you/";
 ---
 <Base {title} {description}>
   <section class="hero hero-slim" data-reveal>

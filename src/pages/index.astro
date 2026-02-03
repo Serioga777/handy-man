@@ -3,6 +3,8 @@ import Base from "../layouts/Base.astro";
 
 const title = "Haven & Hand | Luxury Handyman Services";
 const description = "White-glove handyman services for high-value homes, landlords, and property managers.";
+
+const base = import.meta.env.BASE_URL;
 ---
 <Base {title} {description}>
   <section class="hero hero-home">
@@ -14,8 +16,8 @@ const description = "White-glove handyman services for high-value homes, landlor
           Concierge-level repairs and upgrades with impeccable finishes, insured work, and on-time execution.
         </p>
         <div class="cta-row">
-          <a class="btn btn-primary" href="/contact">Book a Consultation</a>
-          <a class="btn btn-ghost" href="/pricing">Get an Estimate</a>
+          <a class="btn btn-primary" href={`${base}contact/`}>Book a Consultation</a>
+          <a class="btn btn-ghost" href={`${base}pricing/`}>Get an Estimate</a>
         </div>
         <div class="trust-chips">
           <span class="chip"><span class="chip-dot" aria-hidden="true"></span>Licensed & insured</span>
@@ -26,20 +28,20 @@ const description = "White-glove handyman services for high-value homes, landlor
       <div class="hero-stage" data-reveal>
         <div class="stage-frame stage-frame--primary">
           <img
-            src="/assets/img/hero-atelier.svg"
+            src={`${base}assets/img/hero-atelier.svg`}
             alt="Luxury interior and craftsmanship detail"
             loading="eager"
             decoding="async"
           />
         </div>
         <div class="stage-frame stage-frame--secondary">
-          <img src="/assets/img/portfolio-2.svg" alt="Project preview" loading="lazy" decoding="async" />
+          <img src={`${base}assets/img/portfolio-2.svg`} alt="Project preview" loading="lazy" decoding="async" />
         </div>
         <div class="stage-card">
           <div class="stage-kicker">Next opening</div>
           <div class="stage-slot">Wednesday | 10:30 AM</div>
           <p class="stage-meta">Confirm within 24 hours | Fully insured</p>
-          <a class="btn btn-primary" href="/contact">Reserve a Visit</a>
+          <a class="btn btn-primary" href={`${base}contact/`}>Reserve a Visit</a>
         </div>
       </div>
     </div>
@@ -139,7 +141,7 @@ const description = "White-glove handyman services for high-value homes, landlor
         <h2>Schedule your walk-through</h2>
         <p class="muted">Licensed, insured, and accountable - every job, every time.</p>
       </div>
-      <a class="btn btn-primary" href="/contact">Book a Consultation</a>
+      <a class="btn btn-primary" href={`${base}contact/`}>Book a Consultation</a>
     </div>
   </section>
 </Base>

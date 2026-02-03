@@ -39,7 +39,7 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: url("/assets/img/texture-noise.svg");
+  background: url("../assets/img/texture-noise.svg");
   opacity: 0.25;
   pointer-events: none;
   mix-blend-mode: multiply;

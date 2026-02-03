@@ -1,15 +1,13 @@
 import { defineConfig } from "astro/config";
 
+const isGhPages = process.env.GITHUB_ACTIONS === "true";
+const repo = process.env.GITHUB_REPOSITORY?.split("/")[1] ?? "";
+const owner = process.env.GITHUB_REPOSITORY_OWNER ?? "";
+
 export default defineConfig({
-  // For GitHub Pages deployments, assets need a repo-name base path.
-  // Local + Netlify keep base at root ("").
-  site:
-    process.env.GITHUB_ACTIONS === "true"
-      ? `https://${process.env.GITHUB_REPOSITORY_OWNER}.github.io`
-      : undefined,
-  base:
-    process.env.GITHUB_ACTIONS === "true"
-      ? `/${process.env.GITHUB_REPOSITORY?.split("/")[1] ?? ""}`
-      : "",
-  output: "static"
+  output: "static",
+  // GitHub Pages hosts sites under https://{owner}.github.io/{repo}/
+  // We set a base so assets + internal links resolve correctly.
+  site: isGhPages && owner && repo ? `https://${owner}.github.io/${repo}/` : undefined,
+  base: isGhPages && repo ? `/${repo}/` : "/"
 });

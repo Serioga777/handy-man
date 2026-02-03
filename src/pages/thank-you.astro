@@ -3,6 +3,8 @@ import Base from "../layouts/Base.astro";
 
 const title = "Request Received | Haven & Hand";
 const description = "Thanks - your booking request has been received.";
+
+const base = import.meta.env.BASE_URL;
 ---
 <Base {title} {description}>
   <section class="hero hero-slim" data-reveal>
@@ -15,8 +17,8 @@ const description = "Thanks - your booking request has been received.";
           scope.
         </p>
         <div class="cta-row">
-          <a class="btn btn-primary" href="/services">Explore Services</a>
-          <a class="btn btn-ghost" href="/">Back to Home</a>
+          <a class="btn btn-primary" href={`${base}services/`}>Explore Services</a>
+          <a class="btn btn-ghost" href={base}>Back to Home</a>
         </div>
         <div class="trust-bar">
           <span>Licensed & insured</span>
@@ -67,8 +69,7 @@ const description = "Thanks - your booking request has been received.";
         <h2>Want to add more details?</h2>
         <p class="muted">Reply to our confirmation email, or submit another note.</p>
       </div>
-      <a class="btn btn-primary" href="/contact">Add details</a>
+      <a class="btn btn-primary" href={`${base}contact/`}>Add details</a>
     </div>
   </section>
 </Base>
-

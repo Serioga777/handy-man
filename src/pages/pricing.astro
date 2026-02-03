@@ -3,6 +3,8 @@ import Base from "../layouts/Base.astro";
 
 const title = "Pricing | Haven & Hand";
 const description = "Transparent estimate options and premium service tiers.";
+
+const base = import.meta.env.BASE_URL;
 ---
 <Base {title} {description}>
   <section class="hero hero-slim" data-reveal>
@@ -12,8 +14,8 @@ const description = "Transparent estimate options and premium service tiers.";
         <h1>Transparent estimates built around scope and finish level.</h1>
         <p class="lead">No surprises, no vague ranges. We scope carefully and quote with clarity.</p>
         <div class="cta-row">
-          <a class="btn btn-primary" href="/contact">Start an Estimate</a>
-          <a class="btn btn-ghost" href="/how-it-works">How It Works</a>
+          <a class="btn btn-primary" href={`${base}contact/`}>Start an Estimate</a>
+          <a class="btn btn-ghost" href={`${base}how-it-works/`}>How It Works</a>
         </div>
       </div>
       <div class="hero-card">
@@ -98,7 +100,7 @@ const description = "Transparent estimate options and premium service tiers.";
         <h2>Request a tailored quote</h2>
         <p class="muted">We'll confirm your request within 24 hours.</p>
       </div>
-      <a class="btn btn-primary" href="/contact">Start an Estimate</a>
+      <a class="btn btn-primary" href={`${base}contact/`}>Start an Estimate</a>
     </div>
   </section>
 </Base>
